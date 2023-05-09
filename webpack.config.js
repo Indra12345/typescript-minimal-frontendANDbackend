@@ -1,15 +1,13 @@
-const path = require("path")
-const htmlWebpackPlugin = require("html-webpack-plugin")
-
-
+const path = require("path");
+const htmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    mode: 'development',
-    entry: './src/index.js',
-    output: {  
-               path: path.resolve(__dirname,"dist") ,
-               filename: "bundle.js",
-               clean: true,
+  mode: "development",
+  entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    clean: true,
   },
 
   module: {
@@ -18,29 +16,23 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-            loader: "babel-loader"
-        }
-    },
+          loader: "babel-loader",
+        },
+      },
       // CSS rules
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        use: ["style-loader", "css-loader"],
       },
-    ]
+    ],
   },
 
   plugins: [
-
     new htmlWebpackPlugin({
-      template : "./index.html",
-      title: "Webpack_starter_copy"
+      template: "./index.html",
+      title: "Webpack_starter_copy",
     }),
-    
-    
-  ] ,
+  ],
 
   devServer: {
     // static: false, // {
@@ -49,4 +41,4 @@ module.exports = {
     // compress: true,
     port: 9000,
   },
-}
+};
