@@ -1,3 +1,4 @@
+git clone https://github.com/Indra12345/Webpack-starter-copy.git  // to clone to your local rep
 
 npm install    // will install the dependencies
 
@@ -11,4 +12,6 @@ http://localhost:9000/index.html  // url
  // And Since, the deve server uses --watch mode of webpack, any changed in the src folder will be rebunded and rendered .
 
  // you have any question, email me. 
+
+
  
