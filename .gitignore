@@ -1,1 +1,6 @@
-node_modules
+backend/node_modules
+
+frontend/node_modules
+
+
+// also add .env in real project, to protect the useful info
